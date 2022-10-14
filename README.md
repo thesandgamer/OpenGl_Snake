@@ -1,1 +1,2 @@
-# OpenGl_Snake-
+# OpenGl_Snake
+little snake using openGL

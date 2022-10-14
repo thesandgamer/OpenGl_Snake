@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\CMakeFiles\d0c016ebe63b1318543420c1bc9a024a\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{086092BD-5AF3-36C1-AEBD-487FD74ED2F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
