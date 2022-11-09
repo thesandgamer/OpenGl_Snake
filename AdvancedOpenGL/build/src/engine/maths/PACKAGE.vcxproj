@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{40F867BC-A53F-373C-AFEF-396281251C19}</ProjectGuid>
+    <ProjectGuid>{A454F0DD-D6D7-3C45-BE1D-CDDB8EEC52F2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -68,11 +68,11 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd "D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build"
+cd "D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build"
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+C:\Users\adrien.nourigat\scoop\apps\cmake\3.24.3\bin\cpack.exe -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -86,11 +86,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd "D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build"
+cd "D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build"
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+C:\Users\adrien.nourigat\scoop\apps\cmake\3.24.3\bin\cpack.exe -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -104,11 +104,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd "D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build"
+cd "D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build"
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+C:\Users\adrien.nourigat\scoop\apps\cmake\3.24.3\bin\cpack.exe -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -122,11 +122,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-cd "D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build"
+cd "D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build"
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+C:\Users\adrien.nourigat\scoop\apps\cmake\3.24.3\bin\cpack.exe -C $(Configuration) --config ./CPackConfig.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -137,7 +137,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\CMakeFiles\1c066a62f39f48c479593fb9b87b02da\PACKAGE_force.rule">
+    <CustomBuild Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\CMakeFiles\4568a968a21e602dd0848c9f75c4f193\PACKAGE_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd .
@@ -149,7 +149,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> </Message>
@@ -163,7 +163,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"> </Message>
@@ -177,7 +177,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"> </Message>
@@ -191,20 +191,20 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\src\engine\maths\CMakeFiles\PACKAGE_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\ZERO_CHECK.vcxproj">
-      <Project>{003D8AC5-49A1-3B39-AE52-0766AE643187}</Project>
+    <ProjectReference Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\ZERO_CHECK.vcxproj">
+      <Project>{95E64093-B53C-38E0-855C-11F7DD2651F6}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\build\ALL_BUILD.vcxproj">
-      <Project>{13064B73-0430-3309-9734-46D0941E6216}</Project>
+    <ProjectReference Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\build\ALL_BUILD.vcxproj">
+      <Project>{1E20E39C-378E-3EE2-959B-10951EA3F97E}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

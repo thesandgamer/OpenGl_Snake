@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\Matrix4.cpp">
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\Matrix4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\Matrix4Row.cpp">
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\Matrix4Row.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\Quaternion.cpp">
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\Quaternion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\Vector2.cpp">
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\Vector2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\Vector3.cpp">
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\Vector4.cpp">
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\Vector4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Nourigat Adrien\OpenGL\opengl-training-master\AdvancedOpenGL\src\engine\maths\CMakeLists.txt" />
+    <CustomBuild Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\engine\maths\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4BD669D8-C364-382F-9642-E78C34226814}</UniqueIdentifier>
+      <UniqueIdentifier>{85A9E72E-5104-38A2-B7F4-DED4880609D6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

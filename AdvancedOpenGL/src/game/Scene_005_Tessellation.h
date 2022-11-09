@@ -26,6 +26,8 @@ private:
     Game *game;
     GLuint vao;
     Shader shader;
+
+    int tesShaderLocation;
 };
 
 

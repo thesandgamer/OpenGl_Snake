@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL
-BuildDirectory: D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL/build
+SourceDirectory: D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL
+BuildDirectory: D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: md9-2018-004
+Site: md8-2017-045
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Win32-MSBuild
@@ -27,8 +27,8 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL"
-MakeCommand: "C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "C:/Users/adrien.nourigat/scoop/apps/cmake/3.24.3/bin/cmake.exe" "D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL"
+MakeCommand: C:\Users\adrien.nourigat\scoop\apps\cmake\3.24.3\bin\cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control

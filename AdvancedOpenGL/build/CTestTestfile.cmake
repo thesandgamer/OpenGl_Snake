@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL
-# Build directory: D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL/build
+# Source directory: D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL
+# Build directory: D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

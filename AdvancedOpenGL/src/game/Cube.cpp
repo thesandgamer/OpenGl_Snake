@@ -7,6 +7,7 @@ void Cube::Load()
 {
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
+    
     static const GLfloat vertexPositions[] =
     {
             -0.25f,  0.25f, -0.25f,

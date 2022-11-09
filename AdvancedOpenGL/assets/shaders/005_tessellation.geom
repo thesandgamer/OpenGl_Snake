@@ -1,7 +1,7 @@
 #version 450 core
 
-layout (triangles) in;
-layout (points, max_vertices = 3) out;
+layout (quads) in;
+layout (points, max_vertices = 4) out;
 
 void main(void)
 {

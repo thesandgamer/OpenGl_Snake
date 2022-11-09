@@ -88,16 +88,19 @@ void Scene_020_GenerateGeometry::draw()
     glClearBufferfv(GL_DEPTH, 0, &one);
 
 
+    //Pour avoir le rendu avec camera
     proj = Matrix4::createPerspectiveFOV(45.0f, game->windowWidth, game->windowHeight, 0.1f, 1000.0f);
     view = Matrix4::createTranslation(Vector3(0.0f, 0.0f, -8.0f)) *
-                            Matrix4::createRotationY(f * 71.0f) *
+                            Matrix4::createRotationY(f * 10.0f) *
                             Matrix4::createRotationX(f * 10.0f);
 
     shader.use();
     shader.setMatrix4("mvpMatrix", proj * view);
     shader.setMatrix4("mvMatrix", view);
-    shader.setFloat("stretch", sinf(f * 4.0f) * 0.75f + 1.0f);
+    shader.setFloat("stretch", (sinf(f * 4.0f) * 0.75f + 1.0f) /2); //Set la variable dans le shader
+   //shader.setFloat("stretch", 1);
+
 
     glBindVertexArray(vao);
-    glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_SHORT, NULL);
+    glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_SHORT, NULL); //Draw le mesh
 }

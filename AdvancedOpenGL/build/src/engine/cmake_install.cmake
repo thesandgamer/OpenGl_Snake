@@ -1,4 +1,4 @@
-# Install script for directory: D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL/src/engine
+# Install script for directory: D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/src/engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL/build/src/engine/maths/cmake_install.cmake")
+  include("D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/build/src/engine/maths/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL/build/src/engine/input/cmake_install.cmake")
+  include("D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/build/src/engine/input/cmake_install.cmake")
 endif()
 

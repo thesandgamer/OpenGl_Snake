@@ -1,4 +1,4 @@
-# Install script for directory: D:/Nourigat Adrien/OpenGL/opengl-training-master/AdvancedOpenGL/src/engine/maths
+# Install script for directory: D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/src/engine/maths
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

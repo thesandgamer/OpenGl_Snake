@@ -19,10 +19,13 @@
 #define SHADER_COMP(s) PATH3(SHADER_PATH, s, EXT_COMP)
 #define SHADER_ID(s) STR(s)
 
-#define SCENE_NAME Scene_Game_StaticCube
-#define SHADER_NAME IDENT(Game_StaticCube)
+#define SCENE_NAME Scene_Ex_Planet
+#define SHADER_NAME IDENT(Ex_Planet)
 
 /**
+ * 
+ * Scene_Ex_Planet Ex_Planet
+ * 
  * Scene_025_ComputeShaderBoids
  * Scene_024_ComputeShaderRaytracing
  * Scene_023_ComputeShaderGrid

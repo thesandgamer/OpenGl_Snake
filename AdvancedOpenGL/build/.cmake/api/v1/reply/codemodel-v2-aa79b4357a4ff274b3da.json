@@ -1,0 +1,832 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src/engine",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-src.engine-Debug-84c5f9913b2a37d314dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/engine",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/engine/maths",
+					"jsonFile" : "directory-src.engine.maths-Debug-ea384b64bae5c20034e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/maths",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/engine/input",
+					"jsonFile" : "directory-src.engine.input-Debug-bde8515179a2ff4398d1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/input",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/game",
+					"jsonFile" : "directory-src.game-Debug-ed37d73a2506dd2b1df8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/game",
+					"targetIndexes" : 
+					[
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "OpenGLTraining",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-73b05734d473259af62d.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Continuous::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Continuous-Debug-1ab0e519e03ef765247f.json",
+					"name" : "Continuous",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Experimental::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Experimental-Debug-efecd12283198b8d34f1.json",
+					"name" : "Experimental",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nightly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nightly-Debug-7ef020129f0b6bd634da.json",
+					"name" : "Nightly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NightlyMemoryCheck::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NightlyMemoryCheck-Debug-ce65d8b9c8c8002283b6.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGLTraining::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGLTraining-Debug-3e298c4ef2771f22eb14.json",
+					"name" : "OpenGLTraining",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-235ba1bf94e5246a8096.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "engine::@d30147da1c6e0503853c",
+					"jsonFile" : "target-engine-Debug-7339d55074075c2de0ec.json",
+					"name" : "engine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "game::@237b513620d2b2ecc71d",
+					"jsonFile" : "target-game-Debug-480dc392ab775455f8f8.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "input::@d890401496fc5cc61df8",
+					"jsonFile" : "target-input-Debug-fb5f83fa50860a1b4333.json",
+					"name" : "input",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "maths::@5810069d2bb47800fe83",
+					"jsonFile" : "target-maths-Debug-9052d4106df914ed8293.json",
+					"name" : "maths",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src/engine",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-src.engine-Release-84c5f9913b2a37d314dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/engine",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/engine/maths",
+					"jsonFile" : "directory-src.engine.maths-Release-ea384b64bae5c20034e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/maths",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/engine/input",
+					"jsonFile" : "directory-src.engine.input-Release-bde8515179a2ff4398d1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/input",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/game",
+					"jsonFile" : "directory-src.game-Release-ed37d73a2506dd2b1df8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/game",
+					"targetIndexes" : 
+					[
+						8
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "OpenGLTraining",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-73b05734d473259af62d.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Continuous::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Continuous-Release-1ab0e519e03ef765247f.json",
+					"name" : "Continuous",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Experimental::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Experimental-Release-efecd12283198b8d34f1.json",
+					"name" : "Experimental",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nightly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nightly-Release-7ef020129f0b6bd634da.json",
+					"name" : "Nightly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NightlyMemoryCheck::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NightlyMemoryCheck-Release-ce65d8b9c8c8002283b6.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGLTraining::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGLTraining-Release-5c3a7dadd68e645cb916.json",
+					"name" : "OpenGLTraining",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-235ba1bf94e5246a8096.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "engine::@d30147da1c6e0503853c",
+					"jsonFile" : "target-engine-Release-71790da3d4ac319f76a6.json",
+					"name" : "engine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "game::@237b513620d2b2ecc71d",
+					"jsonFile" : "target-game-Release-6a05af1dd6863de9af28.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "input::@d890401496fc5cc61df8",
+					"jsonFile" : "target-input-Release-0c8692eb919c07737e16.json",
+					"name" : "input",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "maths::@5810069d2bb47800fe83",
+					"jsonFile" : "target-maths-Release-370f9c23d559fce49214.json",
+					"name" : "maths",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src/engine",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-src.engine-MinSizeRel-84c5f9913b2a37d314dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/engine",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/engine/maths",
+					"jsonFile" : "directory-src.engine.maths-MinSizeRel-ea384b64bae5c20034e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/maths",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/engine/input",
+					"jsonFile" : "directory-src.engine.input-MinSizeRel-bde8515179a2ff4398d1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/input",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/game",
+					"jsonFile" : "directory-src.game-MinSizeRel-ed37d73a2506dd2b1df8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/game",
+					"targetIndexes" : 
+					[
+						8
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "OpenGLTraining",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-73b05734d473259af62d.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Continuous::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Continuous-MinSizeRel-1ab0e519e03ef765247f.json",
+					"name" : "Continuous",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Experimental::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Experimental-MinSizeRel-efecd12283198b8d34f1.json",
+					"name" : "Experimental",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nightly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nightly-MinSizeRel-7ef020129f0b6bd634da.json",
+					"name" : "Nightly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NightlyMemoryCheck::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NightlyMemoryCheck-MinSizeRel-ce65d8b9c8c8002283b6.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGLTraining::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGLTraining-MinSizeRel-ee80439699c97fe012a8.json",
+					"name" : "OpenGLTraining",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-235ba1bf94e5246a8096.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "engine::@d30147da1c6e0503853c",
+					"jsonFile" : "target-engine-MinSizeRel-f3e5e944ff9c0066c3b2.json",
+					"name" : "engine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "game::@237b513620d2b2ecc71d",
+					"jsonFile" : "target-game-MinSizeRel-a1b5744e84afd290e1a3.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "input::@d890401496fc5cc61df8",
+					"jsonFile" : "target-input-MinSizeRel-c18a9c9865cde5587c2a.json",
+					"name" : "input",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "maths::@5810069d2bb47800fe83",
+					"jsonFile" : "target-maths-MinSizeRel-2d700ee15c5bb0de8850.json",
+					"name" : "maths",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "src/engine",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-src.engine-RelWithDebInfo-84c5f9913b2a37d314dc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/engine",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/engine/maths",
+					"jsonFile" : "directory-src.engine.maths-RelWithDebInfo-ea384b64bae5c20034e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/maths",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/engine/input",
+					"jsonFile" : "directory-src.engine.input-RelWithDebInfo-bde8515179a2ff4398d1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/engine/input",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/game",
+					"jsonFile" : "directory-src.game-RelWithDebInfo-ed37d73a2506dd2b1df8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src/game",
+					"targetIndexes" : 
+					[
+						8
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "OpenGLTraining",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-73b05734d473259af62d.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Continuous::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Continuous-RelWithDebInfo-1ab0e519e03ef765247f.json",
+					"name" : "Continuous",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Experimental::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Experimental-RelWithDebInfo-efecd12283198b8d34f1.json",
+					"name" : "Experimental",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Nightly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Nightly-RelWithDebInfo-7ef020129f0b6bd634da.json",
+					"name" : "Nightly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NightlyMemoryCheck::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NightlyMemoryCheck-RelWithDebInfo-ce65d8b9c8c8002283b6.json",
+					"name" : "NightlyMemoryCheck",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenGLTraining::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenGLTraining-RelWithDebInfo-4b1ea1513968c8ea3177.json",
+					"name" : "OpenGLTraining",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-235ba1bf94e5246a8096.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "engine::@d30147da1c6e0503853c",
+					"jsonFile" : "target-engine-RelWithDebInfo-b034eebbba8db53b5fa4.json",
+					"name" : "engine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "game::@237b513620d2b2ecc71d",
+					"jsonFile" : "target-game-RelWithDebInfo-2c1dad3a012feed97a47.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "input::@d890401496fc5cc61df8",
+					"jsonFile" : "target-input-RelWithDebInfo-122565709248cedceb98.json",
+					"name" : "input",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "maths::@5810069d2bb47800fe83",
+					"jsonFile" : "target-maths-RelWithDebInfo-64ec4289d09c683a7a8e.json",
+					"name" : "maths",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL/build",
+		"source" : "D:/TD4/Nourigat Adrien/OpenGl_Snake/AdvancedOpenGL"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
