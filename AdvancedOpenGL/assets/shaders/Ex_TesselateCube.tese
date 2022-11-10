@@ -10,10 +10,11 @@ uniform mat4 mvMatrix;
 
 void main()
 {
-    vec3 p0 = gl_TessCoord.x * tcPosition[0];
+    vec3 p0 = gl_TessCoord.x * tcPosition[0];// Point (coord world) =  coord du point tesselé(relative à Point Contrôle) * coord point de contrôle  
     vec3 p1 = gl_TessCoord.y * tcPosition[1];
     vec3 p2 = gl_TessCoord.z * tcPosition[2];
     tePatchDistance = gl_TessCoord;
-    tePosition = normalize(p0 + p1 + p2);
+    //tePosition = p0 + p1 + p2;
+    tePosition = normalize(p0 + p1 + p2);   //On normalise pour donner l'aspect sphère
     gl_Position = projMatrix * mvMatrix * vec4(tePosition, 1);
 }
