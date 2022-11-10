@@ -43,65 +43,65 @@ void Scene_Ex_TesselateCube::load() {
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
 
-/*
-    const int Indices[] = {
-        2, 1, 0,
-        3, 2, 0,
-        4, 3, 0,
-        5, 4, 0,
-        1, 5, 0,
 
-        11, 6,  7,
-        11, 7,  8,
-        11, 8,  9,
-        11, 9,  10,
-        11, 10, 6,
+    // const int Indices[] = {
+    //     2, 1, 0,
+    //     3, 2, 0,
+    //     4, 3, 0,
+    //     5, 4, 0,
+    //     1, 5, 0,
 
-        1, 2, 6,
-        2, 3, 7,
-        3, 4, 8,
-        4, 5, 9,
-        5, 1, 10,
+    //     11, 6,  7,
+    //     11, 7,  8,
+    //     11, 8,  9,
+    //     11, 9,  10,
+    //     11, 10, 6,
 
-        2,  7, 6,
-        3,  8, 7,
-        4,  9, 8,
-        5, 10, 9,
-        1, 6, 10 };
+    //     1, 2, 6,
+    //     2, 3, 7,
+    //     3, 4, 8,
+    //     4, 5, 9,
+    //     5, 1, 10,
 
-    const float Verts[] = {
-         0.000f,  0.000f,  1.000f,
-         0.894f,  0.000f,  0.447f,
-         0.276f,  0.851f,  0.447f,
-        -0.724f,  0.526f,  0.447f,
-        -0.724f, -0.526f,  0.447f,
-         0.276f, -0.851f,  0.447f,
-         0.724f,  0.526f, -0.447f,
-        -0.276f,  0.851f, -0.447f,
-        -0.894f,  0.000f, -0.447f,
-        -0.276f, -0.851f, -0.447f,
-         0.724f, -0.526f, -0.447f,
-         0.000f,  0.000f, -1.000f };
+    //     2,  7, 6,
+    //     3,  8, 7,
+    //     4,  9, 8,
+    //     5, 10, 9,
+    //     1, 6, 10 };
 
-*/
+    // const float Verts[] = {
+    //      0.000f,  0.000f,  1.000f,
+    //      0.894f,  0.000f,  0.447f,
+    //      0.276f,  0.851f,  0.447f,
+    //     -0.724f,  0.526f,  0.447f,
+    //     -0.724f, -0.526f,  0.447f,
+    //      0.276f, -0.851f,  0.447f,
+    //      0.724f,  0.526f, -0.447f,
+    //     -0.276f,  0.851f, -0.447f,
+    //     -0.894f,  0.000f, -0.447f,
+    //     -0.276f, -0.851f, -0.447f,
+    //      0.724f, -0.526f, -0.447f,
+    //      0.000f,  0.000f, -1.000f };
 
-    static const GLfloat Verts[] =
-    {
-         0.000f,  0.000f,  1.000f,
-         0.943f,  0.000f, -0.333f,
-        -0.471f,  0.816f, -0.333f,
-        -0.471f, -0.816f, -0.333f
-    };
 
-    static const GLushort Indices[] =
-    {
-        0, 1, 2,
-        0, 2, 3,
-        0, 3, 1,
-        3, 2, 1
-    };
 
-/*
+    // static const GLfloat Verts[] =
+    // {
+    //      0.000f,  0.000f,  1.000f,
+    //      0.943f,  0.000f, -0.333f,
+    //     -0.471f,  0.816f, -0.333f,
+    //     -0.471f, -0.816f, -0.333f
+    // };
+
+    // static const GLushort Indices[] =
+    // {
+    //     0, 1, 2,
+    //     0, 2, 3,
+    //     0, 3, 1,
+    //     3, 2, 1
+    // };
+
+
    static const GLfloat Verts[] =
     {
         0.25f,  0.25f,   0.25f,
@@ -113,43 +113,72 @@ void Scene_Ex_TesselateCube::load() {
         -0.25f,  -0.25f, -0.25f,
         -0.25f,  0.25f,  -0.25f,
         0.25f,  -0.25f, -0.25f,
+        // 0.0f, 0.0f, 0.0f,
+        // 0.5f,0.5f, 0.5f,
+        // 1.0f, 1.0f, 1.0f,
 
     };
 
     static const GLushort Indices[] =
     {
-        0, 1, 3,    
-        1, 3, 2,
-        0, 3, 1,
-        3, 2, 1,
+        //8, 9, 10, 
+        // 0, 1, 3,    
+        // 1, 3, 2,
 
-        3, 2, 1,
-        3, 2, 1,
-        0, 1, 3,    
-        1, 3, 2,
+        // 0, 4, 5,
+        // 0, 1, 5,
 
-        0, 3, 1,
-        3, 2, 1,
-        3, 2, 1,
-        3, 2, 1,
+        // 1, 5, 6,
+        // 1, 2, 6,
 
-        0, 1, 3,    
-        1, 3, 2,
-        0, 3, 1,
-        3, 2, 1,
+        // 0, 1, 3,    
+        // 1, 3, 2,
 
-        3, 2, 1,
-        3, 2, 1,
-        0, 1, 3,    
-        1, 3, 2,
+        // 0, 3, 1,
+        // 3, 2, 1,
 
-        0, 3, 1,
-        3, 2, 1,
-        3, 2, 1,
-        3, 2, 1,
+        // 3, 2, 1,
+        // 3, 2, 1,
+        //front
+        0,1,3,
+        0,1,2,
+        //up
+        0,2,4,
+        2,4,6,
+        //left
+        1,2,6,
+        1,5,6,
+        //down
+        1,3,7,
+        1,5,7,
+        //right
+        0,4,3,
+        3,4,7,
+        //back
+        5,6,4,
+        5,7,4,
+
+
+        // 8, 9, 10,    
+        // 1, 3, 2,
+
+        // 0, 3, 1,
+        // 3, 2, 1,
+
+        // 3, 2, 1,
+        // 3, 2, 1,
+
+        // 0, 1, 3,    
+        // 1, 3, 2,
+
+        // 0, 3, 1,
+        // 3, 2, 1,
+
+        // 3, 2, 1,
+        // 3, 2, 1,
 
        
-    };*/
+    };
     IndexCount = sizeof(Indices) / sizeof(Indices[0]);
 
     glPatchParameteri(GL_PATCH_VERTICES, 3);
@@ -177,9 +206,9 @@ void Scene_Ex_TesselateCube::load() {
     */
 
 
-
-    glGenBuffers(1, &buffer);
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    GLuint positions;
+    glGenBuffers(1, &positions);
+    glBindBuffer(GL_ARRAY_BUFFER, positions);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Verts), Verts, GL_STATIC_DRAW);	
 
     glEnableVertexAttribArray(0);
@@ -190,6 +219,7 @@ void Scene_Ex_TesselateCube::load() {
     glGenBuffers(1, &indices);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indices);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
+
 
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
@@ -243,8 +273,8 @@ void Scene_Ex_TesselateCube::draw()
     shader.setMatrix4("mvMatrix", view);
     shader.setMatrix4("projMatrix", proj);
 
-    shader.setFloat("TessLevelInner", value);
-    shader.setFloat("TessLevelOuter", value);
+    shader.setFloat("TessLevelInner", 10);
+    shader.setFloat("TessLevelOuter", 10);
 
     if (wireframe)
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -253,6 +283,10 @@ void Scene_Ex_TesselateCube::draw()
 
     glPointSize(5.0f);
 
-    glDrawElements(GL_PATCHES, IndexCount, GL_UNSIGNED_SHORT, 0); //Draw le mesh
+    // for(int i =0; i < IndexCount; i+=3){
+    //     glDrawArrays(GL_PATCHES, i, 3);
+    // }
+    //
+    glDrawElements(GL_PATCHES, IndexCount, GL_UNSIGNED_SHORT, 0); //Draw les faces du mesh
     //glDrawArrays(GL_TRIANGLES, 0, 36);
 }
