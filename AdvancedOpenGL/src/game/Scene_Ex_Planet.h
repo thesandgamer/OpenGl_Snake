@@ -19,18 +19,22 @@ public:
     void draw();
     void setGame(Game *);
 
+    GLsizei IndexCount;
+
+
 private:
     Game *game;
     GLuint vao;
     GLuint buffer;
+
+    Matrix4 mvp;
     Matrix4 transform;
     Matrix4 projection;
 
     bool wireframe;
 
-    std::vector<float> Scene_Ex_Planet::buildUnitPositiveX(int subdivision);
-
     Shader shader;
+
 };
 
 

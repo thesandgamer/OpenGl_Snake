@@ -1,18 +1,17 @@
-//
-// Created by gaetz on 04/12/2019.
-//
+#ifndef SCENE_EX_TESSELATECUBE_H
+#define SCENE_EX_TESSELATECUBE_H
 
-#ifndef Scene_021_ChangePrimitiveType_H
-#define Scene_021_ChangePrimitiveType_H
+#pragma once
+
 
 #include "../engine/Scene.h"
 #include "../engine/Assets.h"
 #include "../engine/MeshObject.h"
 
-class Scene_021_ChangePrimitiveType : public Scene {
+class Scene_Ex_TesselateCube : public Scene {
 public:
-    Scene_021_ChangePrimitiveType();
-    ~Scene_021_ChangePrimitiveType();
+    Scene_Ex_TesselateCube();
+    ~Scene_Ex_TesselateCube();
     void load();
     void clean();
     void pause();
@@ -29,7 +28,6 @@ private:
     
     float totalTime;
     const float timeScale = 0.05f;
-    MeshObject object;
 
     // Uniforms
     Matrix4 mvp;
@@ -37,7 +35,10 @@ private:
     Matrix4 proj;
 
     Shader shader;
+
+    bool wireframe{false};
+
+    GLsizei IndexCount;
 };
 
-
-#endif //Scene_021_ChangePrimitiveType_H
+#endif

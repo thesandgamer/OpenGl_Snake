@@ -26,6 +26,7 @@ private:
     Game *game;
     GLuint vao;
     GLuint buffer;
+    
     float totalTime;
     const float timeScale = 0.05f;
 

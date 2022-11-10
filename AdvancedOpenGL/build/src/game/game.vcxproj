@@ -298,6 +298,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_024_ComputeShaderRaytacing.cpp" />
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_025_ComputeShaderBoids.cpp" />
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_Ex_Planet.cpp" />
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_Ex_TesselateCube.cpp" />
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_Game_StaticCube.cpp" />
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Snake.cpp" />
   </ItemGroup>

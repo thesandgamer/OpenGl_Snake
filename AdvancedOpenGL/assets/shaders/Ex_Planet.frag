@@ -1,13 +1,10 @@
 #version 450 core
 
-out vec4 color;
+flat in vec4 color;
 
-in VS_OUT
-{
-    vec4 color;
-} fs_in;
+out vec4 output_color;
 
 void main(void)
 {
-    color = fs_in.color;
+    output_color = color;
 }

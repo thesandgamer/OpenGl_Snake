@@ -135,7 +135,8 @@
 				31,
 				32,
 				33,
-				34
+				34,
+				35
 			]
 		}
 	],
@@ -193,7 +194,8 @@
 				31,
 				32,
 				33,
-				34
+				34,
+				35
 			]
 		}
 	],
@@ -395,6 +397,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/game/Scene_Ex_Planet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/game/Scene_Ex_TesselateCube.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
