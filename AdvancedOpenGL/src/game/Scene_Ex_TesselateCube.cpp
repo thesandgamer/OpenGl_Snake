@@ -36,13 +36,14 @@ void Scene_Ex_TesselateCube::handleEvent(const InputState &inputState) {
 }
 
 void Scene_Ex_TesselateCube::load() {
-    Assets::loadShader(SHADER_VERT(SHADER_NAME), SHADER_FRAG(SHADER_NAME), "", "", "", SHADER_ID(SHADER_NAME));
-    //Assets::loadShader(SHADER_VERT(SHADER_NAME), SHADER_FRAG(SHADER_NAME), SHADER_TECS(SHADER_NAME), SHADER_TESE(SHADER_NAME), SHADER_GEOM(SHADER_NAME), SHADER_ID(SHADER_NAME));
+    //Assets::loadShader(SHADER_VERT(SHADER_NAME), SHADER_FRAG(SHADER_NAME), "", "", "", SHADER_ID(SHADER_NAME));
+    Assets::loadShader(SHADER_VERT(SHADER_NAME), SHADER_FRAG(SHADER_NAME), SHADER_TECS(SHADER_NAME), SHADER_TESE(SHADER_NAME), SHADER_GEOM(SHADER_NAME), SHADER_ID(SHADER_NAME));
 
 
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
 
+/*
     const int Indices[] = {
         2, 1, 0,
         3, 2, 0,
@@ -82,6 +83,73 @@ void Scene_Ex_TesselateCube::load() {
          0.724f, -0.526f, -0.447f,
          0.000f,  0.000f, -1.000f };
 
+*/
+
+    static const GLfloat Verts[] =
+    {
+         0.000f,  0.000f,  1.000f,
+         0.943f,  0.000f, -0.333f,
+        -0.471f,  0.816f, -0.333f,
+        -0.471f, -0.816f, -0.333f
+    };
+
+    static const GLushort Indices[] =
+    {
+        0, 1, 2,
+        0, 2, 3,
+        0, 3, 1,
+        3, 2, 1
+    };
+
+/*
+   static const GLfloat Verts[] =
+    {
+        0.25f,  0.25f,   0.25f,
+        -0.25f,  -0.25f, 0.25f,
+        -0.25f,  0.25f,  0.25f,
+        0.25f,  -0.25f, 0.25f,
+
+        0.25f,  0.25f,   -0.25f,
+        -0.25f,  -0.25f, -0.25f,
+        -0.25f,  0.25f,  -0.25f,
+        0.25f,  -0.25f, -0.25f,
+
+    };
+
+    static const GLushort Indices[] =
+    {
+        0, 1, 3,    
+        1, 3, 2,
+        0, 3, 1,
+        3, 2, 1,
+
+        3, 2, 1,
+        3, 2, 1,
+        0, 1, 3,    
+        1, 3, 2,
+
+        0, 3, 1,
+        3, 2, 1,
+        3, 2, 1,
+        3, 2, 1,
+
+        0, 1, 3,    
+        1, 3, 2,
+        0, 3, 1,
+        3, 2, 1,
+
+        3, 2, 1,
+        3, 2, 1,
+        0, 1, 3,    
+        1, 3, 2,
+
+        0, 3, 1,
+        3, 2, 1,
+        3, 2, 1,
+        3, 2, 1,
+
+       
+    };*/
     IndexCount = sizeof(Indices) / sizeof(Indices[0]);
 
     glPatchParameteri(GL_PATCH_VERTICES, 3);
@@ -110,20 +178,22 @@ void Scene_Ex_TesselateCube::load() {
 
 
 
-    GLsizei stride = 3 * sizeof(float);
     glGenBuffers(1, &buffer);
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(Verts), Verts, GL_STATIC_DRAW);	   
+    glBufferData(GL_ARRAY_BUFFER, sizeof(Verts), Verts, GL_STATIC_DRAW);	
+
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, stride, 0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
  
     // Create the VBO for indices:
-    glGenBuffers(1, &buffer);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, buffer);
+    GLuint indices;
+    glGenBuffers(1, &indices);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indices);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Indices), Indices, GL_STATIC_DRAW);
 
     glEnable(GL_DEPTH_TEST);
-    glEnable(GL_CULL_FACE);
+    glDepthFunc(GL_LEQUAL);
+    glFrontFace(GL_CW);
 
 
 /*
@@ -159,6 +229,8 @@ void Scene_Ex_TesselateCube::draw()
     glClearBufferfv(GL_COLOR, 0, black);
     glClearBufferfv(GL_DEPTH, 0, &one);
 
+    float time = (float)SDL_GetTicks()/1000;
+    float value =  (abs(cos(time)*10)) ;
 
     //Pour avoir le rendu avec camera
     proj = Matrix4::createPerspectiveFOV(45.0f, game->windowWidth, game->windowHeight, 0.1f, 1000.0f);
@@ -171,11 +243,16 @@ void Scene_Ex_TesselateCube::draw()
     shader.setMatrix4("mvMatrix", view);
     shader.setMatrix4("projMatrix", proj);
 
+    shader.setFloat("TessLevelInner", value);
+    shader.setFloat("TessLevelOuter", value);
+
     if (wireframe)
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     else
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
     glPointSize(5.0f);
-    glDrawElements(GL_PATCHES, IndexCount, GL_UNSIGNED_SHORT, NULL); //Draw le mesh
+
+    glDrawElements(GL_PATCHES, IndexCount, GL_UNSIGNED_SHORT, 0); //Draw le mesh
+    //glDrawArrays(GL_TRIANGLES, 0, 36);
 }

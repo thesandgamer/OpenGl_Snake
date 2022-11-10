@@ -1,9 +1,10 @@
 #version 450 core
 
-
 layout(vertices = 3) out;
+
 in vec3 vPosition[];
 out vec3 tcPosition[];
+
 uniform float TessLevelInner;
 uniform float TessLevelOuter;
 

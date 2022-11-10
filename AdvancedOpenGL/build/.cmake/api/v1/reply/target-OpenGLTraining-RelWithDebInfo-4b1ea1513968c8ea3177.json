@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug/OpenGLTraining.exe"
+			"path" : "RelWithDebInfo/OpenGLTraining.exe"
 		},
 		{
-			"path" : "Debug/OpenGLTraining.pdb"
+			"path" : "RelWithDebInfo/OpenGLTraining.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -58,7 +58,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD"
 				},
 				{
 					"fragment" : "-std:c++17"
@@ -109,23 +109,23 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "engine::@d30147da1c6e0503853c"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "engine::@d30147da1c6e0503853c"
+			"id" : "maths::@5810069d2bb47800fe83"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "input::@d890401496fc5cc61df8"
 		},
 		{
-			"backtrace" : 2,
-			"id" : "game::@237b513620d2b2ecc71d"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "maths::@5810069d2bb47800fe83"
+			"id" : "game::@237b513620d2b2ecc71d"
 		}
 	],
 	"id" : "OpenGLTraining::@6890427a1f51a3e7e1df",
@@ -134,7 +134,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
@@ -143,22 +143,22 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "src\\game\\Debug\\game.lib",
+				"fragment" : "src\\game\\RelWithDebInfo\\game.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "src\\engine\\Debug\\engine.lib",
+				"fragment" : "src\\engine\\RelWithDebInfo\\engine.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "src\\engine\\maths\\Debug\\maths.lib",
+				"fragment" : "src\\engine\\maths\\RelWithDebInfo\\maths.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "src\\engine\\input\\Debug\\input.lib",
+				"fragment" : "src\\engine\\input\\RelWithDebInfo\\input.lib",
 				"role" : "libraries"
 			},
 			{

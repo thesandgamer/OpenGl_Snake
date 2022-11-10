@@ -1,19 +1,9 @@
-
 #version 450 core
 
-in vec4 vVertex;
+in vec4 Position;
+out vec3 vPosition;
 
-out VS_OUT
+void main()
 {
-    vec4 color;
-} vs_out;
-
-uniform mat4 mvMatrix;
-uniform mat4 projMatrix;
-
-
-void main(void)
-{
-    gl_Position = projMatrix * mvMatrix * vVertex;
-    vs_out.color = vVertex * 2.0 + vec4(0.5, 0.5, 0.5, 0.0);
+    vPosition = Position.xyz;
 }
