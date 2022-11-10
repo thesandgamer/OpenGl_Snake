@@ -273,8 +273,9 @@ void Scene_Ex_TesselateCube::draw()
     shader.setMatrix4("mvMatrix", view);
     shader.setMatrix4("projMatrix", proj);
 
-    shader.setFloat("TessLevelInner", 10);
-    shader.setFloat("TessLevelOuter", 10);
+    shader.setFloat("TessLevelInner", value);
+    shader.setFloat("TessLevelOuter", value);
+    //shader.setFloat("stretch", sinf(f * 4.0f) * 0.75f + 1.0f);
 
     if (wireframe)
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);

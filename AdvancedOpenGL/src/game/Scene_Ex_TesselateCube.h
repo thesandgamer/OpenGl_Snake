@@ -36,7 +36,7 @@ private:
 
     Shader shader;
 
-    bool wireframe{false};
+    bool wireframe{true};
 
     GLsizei IndexCount;
 };
