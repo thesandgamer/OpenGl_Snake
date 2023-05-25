@@ -37,10 +37,11 @@ void Scene_022_ComputeShaderPrefixSum::handleEvent(const InputState &inputState)
 void Scene_022_ComputeShaderPrefixSum::load() {
     Assets::loadComputeShader(SHADER_COMP(SHADER_NAME), SHADER_ID(SHADER_NAME));
 
-    glGenBuffers(2, dataBuffer);
+    glGenBuffers(2, dataBuffer);    //Génère 2 buffer qu'on stoque dans dataBuffer
 
-    glBindBuffer(GL_SHADER_STORAGE_BUFFER, dataBuffer[0]);
-    glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_ELEMENTS * sizeof(float), NULL, GL_DYNAMIC_DRAW);
+                //Lit et écrit le stoquage du shader
+    glBindBuffer(GL_SHADER_STORAGE_BUFFER, dataBuffer[0]);  //On bind un shader à 0 du dataBuffer
+    glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_ELEMENTS * sizeof(float), NULL, GL_DYNAMIC_DRAW);//Init le buffer 0 avec ses données
 
     glBindBuffer(GL_SHADER_STORAGE_BUFFER, dataBuffer[1]);
     glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_ELEMENTS * sizeof(float), NULL, GL_DYNAMIC_COPY);
@@ -52,14 +53,14 @@ void Scene_022_ComputeShaderPrefixSum::load() {
         inputData[i] = randomFloat();
     }
 
-    prefixSum(inputData, outputData, NUM_ELEMENTS);
+    prefixSum(inputData, outputData, NUM_ELEMENTS);//Rempli les datas
 
     cShader = Assets::getComputeShader(SHADER_ID(SHADER_NAME));
 
     int n;
     glGetIntegerv(GL_MAX_SHADER_STORAGE_BUFFER_BINDINGS, &n);
 
-
+    //Bin les blocs
     glShaderStorageBlockBinding(cShader.id, 0, 0);
     glShaderStorageBlockBinding(cShader.id, 1, 1);
 }
@@ -67,19 +68,19 @@ void Scene_022_ComputeShaderPrefixSum::load() {
 void Scene_022_ComputeShaderPrefixSum::update(float dt) {
     float * ptr;
 
-    glBindBufferRange(GL_SHADER_STORAGE_BUFFER, 0, dataBuffer[0], 0, sizeof(float) * NUM_ELEMENTS);
-    glBufferSubData(GL_SHADER_STORAGE_BUFFER, 0, sizeof(float) * NUM_ELEMENTS, inputData);
+    glBindBufferRange(GL_SHADER_STORAGE_BUFFER, 0, dataBuffer[0], 0, sizeof(float) * NUM_ELEMENTS); //Bind taille  dans le buffer0
+    glBufferSubData(GL_SHADER_STORAGE_BUFFER, 0, sizeof(float) * NUM_ELEMENTS, inputData);  //Ajoute les inputData (injection des données  du buffer au bind0 )
 
-    glBindBufferRange(GL_SHADER_STORAGE_BUFFER, 1, dataBuffer[1], 0, sizeof(float) * NUM_ELEMENTS);
+    glBindBufferRange(GL_SHADER_STORAGE_BUFFER, 1, dataBuffer[1], 0, sizeof(float) * NUM_ELEMENTS);//Bind la taille du buffer 1
 
     cShader.use();
     glDispatchCompute(1, 1, 1);
 
-    glMemoryBarrier(GL_SHADER_STORAGE_BARRIER_BIT);
+    glMemoryBarrier(GL_SHADER_STORAGE_BARRIER_BIT); //Créer une memeroy barrier 
     glFinish();
 
-    glBindBufferRange(GL_SHADER_STORAGE_BUFFER, 0, dataBuffer[1], 0, sizeof(float) * NUM_ELEMENTS);
-    ptr = (float *)glMapBufferRange(GL_SHADER_STORAGE_BUFFER, 0, sizeof(float) * NUM_ELEMENTS, GL_MAP_READ_BIT);
+    glBindBufferRange(GL_SHADER_STORAGE_BUFFER, 0, dataBuffer[1], 0, sizeof(float) * NUM_ELEMENTS);//Le résultat deviens la source
+    ptr = (float *)glMapBufferRange(GL_SHADER_STORAGE_BUFFER, 0, sizeof(float) * NUM_ELEMENTS, GL_MAP_READ_BIT);//Récupère les données finales(qui sont maintenant dans le buffer 0)
 
     char buffer[1024];
     sprintf(buffer, "SUM: %2.2f %2.2f %2.2f %2.2f %2.2f %2.2f %2.2f %2.2f "

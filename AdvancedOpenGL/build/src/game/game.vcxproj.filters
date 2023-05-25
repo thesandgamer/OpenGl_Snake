@@ -97,6 +97,9 @@
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_025_ComputeShaderBoids.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_Ex_ComputeShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\TD4\Nourigat Adrien\OpenGl_Snake\AdvancedOpenGL\src\game\Scene_Ex_Planet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

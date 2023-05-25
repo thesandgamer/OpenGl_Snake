@@ -19,10 +19,12 @@
 #define SHADER_COMP(s) PATH3(SHADER_PATH, s, EXT_COMP)
 #define SHADER_ID(s) STR(s)
 
-#define SCENE_NAME Scene_Ex_TesselateCube
-#define SHADER_NAME IDENT(Ex_TesselateCube)
+#define SCENE_NAME Scene_Ex_ComputeShader
+#define SHADER_NAME IDENT(Ex_ComputeShader)
 
 /**
+ * 
+ * Scene_Ex_ComputeShader Ex_ComputeShader
  * 
  * Scene_Ex_Planet Ex_Planet
  * Scene_Ex_TesselateCube Ex_TesselateCube
