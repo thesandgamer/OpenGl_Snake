@@ -12,7 +12,6 @@ struct val
     Vector2 pos;
     int value;
 
-    unsigned int : 32;
 
 };
 

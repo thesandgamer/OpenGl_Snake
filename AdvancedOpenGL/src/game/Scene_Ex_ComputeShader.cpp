@@ -43,8 +43,15 @@ void Scene_Ex_ComputeShader::load() {
                 //Lit et écrit le stoquage du shader
     glGenBuffers(2, dataBuffer);    //Génère 2 buffer qu'on stoque dans dataBuffer
 
+    val valeurs[25] = { {{0,0},0},{{1,0},0},{{2,0},0},{{2,0},0},{{2,0},0},
+                        {{0,0},0},{{1,0},0},{{2,0},0},{{2,0},0},{{2,0},0},
+                        {{0,0},0},{{1,0},0},{{2,0},0},{{2,0},0},{{2,0},0},
+                        {{0,0},0},{{1,0},0},{{2,0},0},{{2,0},0},{{2,0},0},
+                        {{0,0},0},{{1,0},0},{{2,0},0},{{2,0},0},{{2,0},0} 
+    };
+
     glBindBuffer(GL_SHADER_STORAGE_BUFFER, dataBuffer[0]);  //On bind un shader à 0 du dataBuffer
-    glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_ELEMENTS*sizeof(val), NULL, GL_DYNAMIC_DRAW);//Init le buffer 0 avec ses données
+    glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_ELEMENTS*sizeof(val), &valeurs, GL_DYNAMIC_DRAW);//Init le buffer 0 avec ses données
                                                                     //PTR vers données
     glBindBuffer(GL_SHADER_STORAGE_BUFFER, dataBuffer[1]);
     glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_ELEMENTS*sizeof(val), NULL, GL_DYNAMIC_COPY);
@@ -57,20 +64,21 @@ void Scene_Ex_ComputeShader::load() {
     glBindBuffer(GL_ARRAY_BUFFER, dataBuffer[0]);
     val* ptr = reinterpret_cast<val *>(glMapBufferRange(GL_ARRAY_BUFFER, 0, NUM_ELEMENTS * sizeof(val),GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT));
 */
-    val* data;
-    glGetBufferSubData(GL_SHADER_STORAGE_BUFFER,0,NUM_ELEMENTS*sizeof(val),data);
+    val* data = new val[25];
+    glGetBufferSubData(GL_SHADER_STORAGE_BUFFER,1,NUM_ELEMENTS*sizeof(val),data);
     
-    /*
+    
+    
     for (int i = 0; i < NUM_ELEMENTS; i++)
     {
-         ptr[i].value = 0;
-         LOG(Info) << "i"+  ptr[i].value;
-    }*/
+         //ptr[i].value = 0;
+         LOG(Info) <<  data[i].pos.x;
+    }
 
    
 
 
-    glUnmapBuffer(GL_ARRAY_BUFFER);
+    //glUnmapBuffer(GL_ARRAY_BUFFER);
 
 
 /*
