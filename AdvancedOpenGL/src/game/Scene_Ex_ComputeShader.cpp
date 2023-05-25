@@ -65,7 +65,7 @@ void Scene_Ex_ComputeShader::load() {
     val* ptr = reinterpret_cast<val *>(glMapBufferRange(GL_ARRAY_BUFFER, 0, NUM_ELEMENTS * sizeof(val),GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT));
 */
     val* data = new val[25];
-    glGetBufferSubData(GL_SHADER_STORAGE_BUFFER,1,NUM_ELEMENTS*sizeof(val),data);
+    glGetBufferSubData(GL_SHADER_STORAGE_BUFFER,dataBuffer[1],NUM_ELEMENTS*sizeof(val),data);
     
     
     
