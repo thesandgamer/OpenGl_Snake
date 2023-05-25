@@ -1,4 +1,5 @@
 #include "ComputeShader.h"
+#include "Log.h"
 
 ComputeShader &ComputeShader::use()
 {
@@ -20,6 +21,16 @@ void ComputeShader::compileComputeShader(const GLchar *source)
     // checkShaderErrors(vs, "compute");
 }
 
+void ComputeShader::printProgramInfoLog(GLuint programId)
+{
+    int maxLength = 2048;
+    int actualLength = 0;
+    char log[2048];
+    glGetProgramInfoLog(programId, maxLength, &actualLength, log);
+    LOG(Info) << "program info log for GL index" << programId;
+    LOG(Info) << log;
+}
+
 void ComputeShader::createShaderProgram()
 {
     // Create program
@@ -27,7 +38,7 @@ void ComputeShader::createShaderProgram()
     glAttachShader(id, cs);
     glLinkProgram(id);
 
-/*
+
     // Check for linking error
     int params = -1;
     glGetProgramiv(id, GL_LINK_STATUS, &params);
@@ -35,12 +46,12 @@ void ComputeShader::createShaderProgram()
     {
         LOG(Error) << "Could not link shader programme GL index " << id;
         printProgramInfoLog(id);
-    }
+    }/*
     if (!isValid(id))
     {
         LOG(Error) << "Could not validate shader" << id;
-    }
-*/
+    }*/
+
 
     // Delete shaders for they are no longer used
     glDeleteShader(cs);

@@ -30,6 +30,9 @@ private:
 
     void compileComputeShader(const GLchar *cSource);
     void createShaderProgram();
+
+	void printProgramInfoLog(GLuint programId);
+
 };
 
 #endif

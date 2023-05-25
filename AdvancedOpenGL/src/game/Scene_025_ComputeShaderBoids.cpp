@@ -86,9 +86,9 @@ void Scene_025_ComputeShaderBoids::load() {
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, NULL);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void *)(8 * sizeof(Vector3)));
 
-        glBindBuffer(GL_ARRAY_BUFFER, flockBuffer[i]);
-        glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(FlockMember), NULL);
-        glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(FlockMember), (void *)sizeof(Vector4));
+        glBindBuffer(GL_ARRAY_BUFFER, flockBuffer[i]);  //Bind buffer
+        glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(FlockMember), NULL); //2ème argument Dit qu'on aura position
+        glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(FlockMember), (void *)sizeof(Vector4));  // sizeof(Vector4): décalage
         glVertexAttribDivisor(2, 1);
         glVertexAttribDivisor(3, 1);
 
@@ -122,12 +122,13 @@ void Scene_025_ComputeShaderBoids::update(float dt) {
     computeShader.use();
     Vector3 goal = Vector3(sinf(totalTime * 0.34f), cosf(totalTime * 0.29f), sinf(totalTime * 0.12f) * cosf(totalTime * 0.5f));
 
-    goal = goal * Vector3(35.0f, 25.0f, 60.0f);
+    goal = goal * Vector3(35.0f, 25.0f, 60.0f); //Set position of goal
 
-    computeShader.setVector3f("goal", goal);
+    computeShader.setVector3f("goal", goal);    //SetGoalOnShader
 
     glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, flockBuffer[frameIndex]);
     glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, flockBuffer[frameIndex ^ 1]);
+
 
     glDispatchCompute(NUM_WORKGROUPS, 1, 1);
 }

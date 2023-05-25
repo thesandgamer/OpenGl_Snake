@@ -20,7 +20,7 @@ layout (std430, binding = 1) buffer block2
     val output_data[];
 };
 
-shared int shared_data[gl_WorkGroupSize.x];
+shared val shared_data[gl_WorkGroupSize.x];
 
 void main(void)
 {
@@ -28,9 +28,10 @@ void main(void)
 
     uint mask;
     // For each step...
+    
     for (int y=0; y < 9;y++ )
     {
-       for (int x=0; x < 9;y++ )
+       for (int x=0; x < 9;x++ )
         {
             if(x ==0 && y==0)continue;
 
@@ -42,10 +43,9 @@ void main(void)
         }
        
     }
-
     barrier();
     memoryBarrierShared();
     // Finally write our data back to the output image
     output_data[id] = input_data[id]; 
 
-s}
+}
